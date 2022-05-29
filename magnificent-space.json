@@ -1,0 +1,78 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/MagnificentMap",
+    "definitions": {
+        "MagnificentMap": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "space": {
+                    "$ref": "#/definitions/Space"
+                }
+            },
+            "required": [
+                "space"
+            ],
+            "title": "Magnificent Map"
+        },
+        "Space": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "dimensions": {
+                    "$ref": "#/definitions/Dimensions"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "foliage": {
+                    "type": "string"
+                },
+                "trees": {
+                    "type": "string"
+                },
+                "rocks": {
+                    "type": "string"
+                },
+                "roads": {
+                    "type": "string"
+                },
+                "water": {
+                    "type": "string"
+                },
+                "structures": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "magnificent-structure.json#/definitions/Structure"
+                    }
+                }
+            },
+            "required": [
+                "dimensions",
+                "type"
+            ],
+            "title": "Magnificent Space"
+        },
+        "Dimensions": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "x": {
+                    "type": "integer"
+                },
+                "y": {
+                    "type": "integer"
+                },
+                "tileSize": {
+                    "type": "integer",
+                    "default": 128
+                }
+            },
+            "required": [
+                "x",
+                "y"
+            ],
+            "title": "Magnificent Space Dimensions"
+        }
+    }
+}

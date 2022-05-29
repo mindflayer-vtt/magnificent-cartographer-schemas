@@ -1,0 +1,84 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/MagnificentStructure",
+    "definitions": {
+        "Structure": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "house": {
+                    "$ref": "#/definitions/House"
+                },
+                "latrine": {
+                    "$ref": "#/definitions/Latrine"
+                },
+                "barn": {
+                    "$ref": "#/definitions/Barn"
+                },
+                "field": {
+                    "$ref": "#/definitions/Field"
+                },
+                "well": {
+                    "$ref": "#/definitions/Well"
+                },
+                "statue": {
+                    "$ref": "#/definitions/Statue"
+                }
+            },
+            "required": [],
+            "title": "Magnificent Structure"
+        },
+        "Building": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "dimensions": {
+                    "type": "string"
+                },
+                "position": {
+                    "$ref": "#/definitions/Position"
+                },
+                "rooms": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Room"
+                    }
+                }
+            },
+            "title": "Magnificent Building"
+        },
+        "Decoration": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "dimensions": {
+                    "type": "string"
+                },
+                "position": {
+                    "$ref": "#/definitions/Position"
+                }
+            },
+            "title": "Magnificent Decoration"
+        },        
+        "House": {
+            "type": "object",
+            "additionalProperties": false,
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Building"
+                }
+            ],
+            "required": [
+                "dimensions",
+                "type"
+            ],
+            "title": "Magnificent House"
+        }
+    }
+}

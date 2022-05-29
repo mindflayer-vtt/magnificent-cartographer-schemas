@@ -1,0 +1,24 @@
+# example: small hut on a beach
+space:
+  type: beach
+  dimensions:
+    x: 25
+    y: 20
+  foliage: sparse
+  rocks: sparse
+  roads: sand
+  water: ocean
+  structures:
+    - house:
+        type: hut
+        dimensions: 15x10
+        position:
+          directions: [bottom, center]
+        rooms:
+          - livingroom:
+              furniture:
+                - bed:
+                - endtable:
+                - table:
+                - chair:
+                - fireplace:

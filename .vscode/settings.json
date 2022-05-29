@@ -1,0 +1,13 @@
+{
+    "yaml.schemas": {
+        "magnificent-space.json": "*.magnificent.yml",
+    },
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "*.magnificent.json"
+            ],
+            "url": "./magnificent-space.json"
+        }
+    ]
+}

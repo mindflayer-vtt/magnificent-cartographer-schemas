@@ -1,0 +1,34 @@
+# example: small village
+space:
+  type: dirt
+  dimensions:
+    x: 60
+    y: 90
+    tileSize: 128
+  foliage: sparse
+  rocks: none
+  roads: gravel
+  border:
+    - barricades:
+        type: wood
+    - tower:
+        type: wood
+  structures:
+    - house:
+        padding: 1
+    - house:
+        padding: 1
+    - house:
+        padding: 1
+    - house:
+        padding: 1
+    - well:
+    - shop:
+        type: smith
+        padding: 1
+    - shop:
+        type: herbalist
+        padding: 1
+    - stable:
+        type: horse
+        padding: 1

@@ -1,0 +1,44 @@
+# example: smalltown house
+space:
+  type: town
+  dimensions:
+    x: 20
+    y: 15
+  foliage: sparse
+  roads: cobble
+  structures:
+    - house:
+        type: townhouse
+        dimensions:
+          x: 18
+          y: 12
+        rooms:
+          - livingroom:
+              size: big
+              furniture:
+                - sofa:
+                - table:
+                - coffeetable:
+                - carpet:
+                - shelf:
+              objects:
+                - key:
+                    location: table
+                - plant:
+                    size: small
+                    location: shelf
+                - plant:
+                    size: big
+              lighting:
+                type: candles
+                distribution: sparse
+          - kitchen:
+              size: small
+              furniture:
+                - stove:
+                - cupboard:
+          - storage:
+              size: tiny
+              furniture:
+                - table:
+          - bedroom:

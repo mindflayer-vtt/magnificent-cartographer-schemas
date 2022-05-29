@@ -1,0 +1,24 @@
+# example: small hut in a forest
+space:
+  type: forest
+  dimensions:
+    x: 25
+    y: 20
+  foliage: dense
+  rocks: sparse
+  roads: grass
+  structures:
+    - house:
+        type: hut
+        dimensions: 15x10
+        position:
+          directions: [up, center]
+        rooms:
+          - livingroom:
+              furniture:
+                - bed:
+                - endtable:
+                - table:
+                - chair:
+          - kitchen:
+              merge: livingroom
